@@ -20,3 +20,4 @@ F:\GitHub\ClapDetector\obj\Debug\net9.0\refint\ClapDetector.dll
 F:\GitHub\ClapDetector\obj\Debug\net9.0\ClapDetector.pdb
 F:\GitHub\ClapDetector\obj\Debug\net9.0\ClapDetector.genruntimeconfig.cache
 F:\GitHub\ClapDetector\obj\Debug\net9.0\ref\ClapDetector.dll
+F:\GitHub\ClapDetector\obj\Debug\net9.0\ClapDetector.sourcelink.json

@@ -279,7 +279,9 @@ internal static partial class KeyImitation
         MediaPlayPause = 0xB3
     }
     [DllImport("user32.dll")]
-    static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, UIntPtr dwExtraInfo);
+#pragma warning disable SYSLIB1054
+    private static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, UIntPtr dwExtraInfo);
+#pragma warning restore SYSLIB1054
 
     public static void PressKey(Key key, float delay = 0)
     {
