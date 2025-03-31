@@ -3,11 +3,11 @@
 using NAudio.Dsp;
 using NAudio.Wave;
 
-internal class ClapDetector(float threshold = 0.9f)
+internal class ClapDetector(float threshold = 0.9f, float clapCooldown = 500)
 {
     private WaveInEvent _waveIn = null!;
     private DateTime? _lastClapTime;
-    private TimeSpan _clapCooldown = TimeSpan.FromMilliseconds(500);
+    private TimeSpan _clapCooldown = TimeSpan.FromMilliseconds(clapCooldown);
     private const int FFT_LENGTH = 1024;
 
     public void Start()
