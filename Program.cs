@@ -41,7 +41,11 @@ internal class ClapDetector(float threshold = 0.9f)
         float deltaFreq = MathF.Abs(lowFreqEnergy - highFreqEnergy);
         bool isInFreqRange = deltaFreq is < 0.1f and > (float)1E-7;
         // Комплексная проверка на хлопок
-        if (!isLoudSound || !isInFreqRange || !isClapCooldown) return;
+        if (!isLoudSound || !isInFreqRange || !isClapCooldown)
+        {
+            return;
+        }
+
         _lastClapTime = DateTime.Now;
         OnClapDetected?.Invoke();
     }
@@ -279,9 +283,7 @@ internal static partial class KeyImitation
         MediaPlayPause = 0xB3
     }
     [DllImport("user32.dll")]
-#pragma warning disable SYSLIB1054
     private static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, UIntPtr dwExtraInfo);
-#pragma warning restore SYSLIB1054
 
     public static void PressKey(Key key, float delay = 0)
     {
@@ -303,7 +305,7 @@ internal static class Program
         detector.OnClapDetected += () =>
         {
             Console.WriteLine("Хлопок обнаружен!");
-            KeyImitation.PressKey(KeyImitation.Key.K);
+            KeyImitation.PressKey(KeyImitation.Key.Space);
         };
         detector.Start();
 
