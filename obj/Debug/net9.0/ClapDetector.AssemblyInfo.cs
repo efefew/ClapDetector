@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClapDetector")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4967a39b48be81801a8890e505a88a562893a813")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90ae29e43fe5f621756b417f412f1d14825307e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClapDetector")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClapDetector")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

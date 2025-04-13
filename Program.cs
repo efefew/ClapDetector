@@ -4,7 +4,7 @@ ClapDetector detector = new();
 detector.OnClapDetected += () =>
 {
     Console.WriteLine("Хлопок обнаружен!");
-    KeyImitation.PressKey(KeyImitation.Key.Space);
+    KeyImitation.PressKey(KeyImitation.Key.MediaPlayPause);
 };
 
 while (true)
